@@ -1,0 +1,267 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+
+@mixin Space-Mono {
+  font-family: "Space Mono", monospace;
+  font-weight: 700;
+  font-style: normal;
+}
+
+// Colors
+/// Primary
+
+$Green400: hsl(172, 67%, 45%);
+$Green400low: hsla(172, 67%, 45%, 0.5);
+$Red: hsl(4, 100%, 67%);
+
+// Neutral
+
+$Green900: hsl(183, 100%, 15%);
+$Grey500: hsl(186, 14%, 43%);
+$Grey400: hsl(184, 14%, 56%);
+$Grey200: hsl(185, 41%, 84%);
+$Grey50: hsl(189, 47%, 97%);
+$White: hsl(0, 100%, 100%);
+
+// Typography
+/// Body Copy
+$radius : 0.4rem;
+$smaller : 0.5rem;
+$small : 1rem; //16px
+$standerd : 1.5rem;//24px
+$large : 2rem;
+
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  box-sizing: border-box;
+  box-shadow: none;
+}
+
+.main-container {
+  @include Space-Mono;
+  max-width: 100vw;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: $small;
+  row-gap: $large;
+  padding-block-end: $standerd;
+  
+  &--Grey200 {
+    color: $Grey500;
+    background-color: $Grey200;
+  }
+  
+  h1 {
+    max-width: 6.5ch;
+    font-size: $standerd;
+    overflow-wrap: break-word;
+    letter-spacing: 0.5ch;
+    padding-block-start: $large;
+    color: $Green900;
+    opacity: 0.8;
+  }
+}
+
+.form {
+  max-width: 28rem;
+  display: flex;
+  flex-direction: column;
+  padding-block: $large; 
+  padding-inline: $standerd;
+  row-gap: $large;
+  border-radius: $standerd;
+  
+  &--White {
+    background-color: $White;
+  }
+  
+  &_section {
+    display: flex;
+    flex-direction: column;
+    padding-inline: $smaller;
+    row-gap: $standerd;
+    
+    &--Green900 {
+      padding-block-start: 2.5rem;
+      padding-inline: $standerd;
+      padding-block-end: $standerd;
+      background-color: $Green900;
+      color: $White;
+      border-radius: $small;
+    }
+  }
+  
+  &_label-container {
+    display: flex;
+    justify-content: space-between;
+    padding-block-end: $smaller;
+  }
+  
+  &_error {
+    color: $Red;
+  }
+  
+  &_input-container {
+    display: flex;
+    padding-block: $smaller;
+    padding-inline: $small;
+    background-color: $Grey50;
+    border-radius: $radius;
+    border: 2px solid transparent;
+  }
+  
+  &_input {
+    @include Space-Mono;
+    width: 100%;
+    font-size: $standerd;
+    text-align: right;
+    color: $Green900;
+    background-color: $Grey50;
+    caret-shape: bar;
+    caret-color: $Green400;
+    -webkit-tap-highlight-color: transparent;
+    
+    &::placeholder {
+      @include Space-Mono;
+      text-align: right;
+      color: $Grey400;
+    }
+    
+    &:focus {
+      outline: none;
+    }
+    
+    &:hover {
+      cursor: pointer;
+    }
+    
+    &--custom {
+      padding-inline: $small;
+      border: thin solid transparent;
+      
+      &::placeholder {
+        text-align: center;
+        color: $Green900;
+        opacity: 0.7;
+      }
+    }
+  }
+  
+  &_tip-button-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: $small;
+  }
+  
+  &_tip-button {
+    @include Space-Mono;
+    font-size: $standerd;
+    padding: $smaller;
+    border-radius: $radius;
+    color: $White;
+    background-color: $Green900;
+    
+    &:hover {
+      cursor: pointer;
+      background-color: $Green400low;
+      color: $Green900;
+    }
+    
+    &--active {
+      background-color: $Green400;
+      color: $Green900;
+    }
+  }
+  
+  &_person {
+    font-size: 0.8rem;
+    color: $Grey400;
+  }
+  
+  &_amount-container {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  &_amount {
+    max-width: 8ch;
+    font-size: $large;
+    overflow: auto;
+    color: $Green400;
+    
+    &:hover {
+      cursor: pointer;
+      color: $Grey200;
+    }
+  }
+  
+  &_reset-button {
+    @include Space-Mono;
+    font-size: 1.2rem;
+    padding: $smaller;
+    text-transform: uppercase;
+    border-radius: $radius;
+    background-color: $Green400;
+    color: $Green900;
+    opacity: 0.4;
+    
+    &--active {
+      opacity: 1;
+      
+      &:hover {
+        cursor: pointer;
+        background-color: $Grey200;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 62.5rem) {
+  
+  .main-container {
+    row-gap: 3.5rem;
+  }
+  
+  .form {
+    max-width: 58rem;
+    flex-direction: row;
+    column-gap: $large;
+    padding: $large;
+    
+    &_section {
+      max-width: 54%;
+      padding: $small;
+      
+      &--Green900 {
+        min-width: 46%;
+        padding: 2.5rem;
+        padding-block-start: 3rem;
+      }
+    }
+    
+    &_tip-button-container {
+      grid-template-columns: 1fr 1fr 1fr;
+    }
+    
+    &_amount-container {
+      align-items: center;
+    }
+    
+    &_amount {
+      max-width: 6ch;
+      font-size: 3.2rem;
+    }
+    
+    &_reset-button {
+      margin-block-start: auto;
+    }
+  }
+}

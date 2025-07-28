@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+  
+<head>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Tip calculator app</title>
+  
+  <link rel="stylesheet" href="./scss/style.css">
+
+  <script defer src="script.js"></script>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+
+</head>
+
+<body>
+
+  <main class="main-container main-container--Grey200">
+    
+    <h1>SPLITTER</h1>
+    
+    <form class="form form--White">
+      
+      <div class="form_section">
+        
+        <div>
+          
+          <div class="form_label-container">
+            <label for="bill-input">Bill</label>
+            <p class="form_error" id="bill_Error"></p>
+          </div>
+          
+          <div class="form_input-container" id="bill-input-container">
+            <img src="./images/icon-dollar.svg" alt="dollar icon" />
+            <input class="form_input" type="number" name="bill-input" id="bill-input"  placeholder="0"/>
+          </div>
+          
+        </div>
+        
+        <div>
+          
+          <div class="form_label-container">
+            <label>Select Tip %</label>
+            <p class="form_error" id="custom_Error"></p>
+          </div>
+          
+          <div class="form_tip-button-container">
+            <button class="form_tip-button" type="button">5%</button>
+            <button class="form_tip-button" type="button">10%</button>
+            <button class="form_tip-button" type="button">15%</button>
+            <button class="form_tip-button" type="button">25%</button>
+            <button class="form_tip-button" type="button">50%</button>
+            <input class="form_input form_input--custom" type="number" id="custom-input" placeholder="Custom" />
+          </div>
+          
+        </div>
+
+        <div>
+          
+          <div class="form_label-container">
+            <label for="person-input">Number of People</label>
+            <p class="form_error" id="person_Error"></p>
+          </div>
+          
+          <div class="form_input-container" id="person-input-container">
+            <img src="./images/icon-person.svg" alt="person icon"/>
+            <input class="form_input" type="number" name="person-input" id="person-input" placeholder="0" />
+          </div>
+          
+        </div>
+      </div>
+    
+      <div class="form_section form_section--Green900">
+        
+        <div class="form_amount-container">
+          <div>
+            <p>Tip Amount</p>
+            <p class="form_person">/ person</p>
+          </div>
+          <p class="form_amount" id="tip_per-person">$0.00</p>
+        </div>
+        
+        <div class="form_amount-container">
+          <div>
+            <p>Total</p>
+            <p class="form_person">/ person</p>
+          </div>
+          <p class="form_amount" id="total-Amount_per-person">$0.00</p>
+        </div>
+        
+        <button class="form_reset-button" id="form_reset" type="reset">Reset</button>
+  
+      </div>
+    </form>
+  </main>
+  
+  <footer class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">ROKUROO7</a>.
+  </footer>
+
+</body>
+</html>

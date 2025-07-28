@@ -1,0 +1,224 @@
+@import url("https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  box-sizing: border-box;
+  box-shadow: none;
+}
+
+.main-container {
+  font-family: "Space Mono", monospace;
+  font-weight: 700;
+  font-style: normal;
+  max-width: 100vw;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 1rem;
+  row-gap: 2rem;
+  padding-block-end: 1.5rem;
+}
+.main-container--Grey200 {
+  color: hsl(186, 14%, 43%);
+  background-color: hsl(185, 41%, 84%);
+}
+.main-container h1 {
+  max-width: 6.5ch;
+  font-size: 1.5rem;
+  overflow-wrap: break-word;
+  letter-spacing: 0.5ch;
+  padding-block-start: 2rem;
+  color: hsl(183, 100%, 15%);
+  opacity: 0.8;
+}
+
+.form {
+  max-width: 28rem;
+  display: flex;
+  flex-direction: column;
+  padding-block: 2rem;
+  padding-inline: 1.5rem;
+  row-gap: 2rem;
+  border-radius: 1.5rem;
+}
+.form--White {
+  background-color: hsl(0, 100%, 100%);
+}
+.form_section {
+  display: flex;
+  flex-direction: column;
+  padding-inline: 0.5rem;
+  row-gap: 1.5rem;
+}
+.form_section--Green900 {
+  padding-block-start: 2.5rem;
+  padding-inline: 1.5rem;
+  padding-block-end: 1.5rem;
+  background-color: hsl(183, 100%, 15%);
+  color: hsl(0, 100%, 100%);
+  border-radius: 1rem;
+}
+.form_label-container {
+  display: flex;
+  justify-content: space-between;
+  padding-block-end: 0.5rem;
+}
+.form_error {
+  color: hsl(4, 100%, 67%);
+}
+.form_input-container {
+  display: flex;
+  padding-block: 0.5rem;
+  padding-inline: 1rem;
+  background-color: hsl(189, 47%, 97%);
+  border-radius: 0.4rem;
+  border: 2px solid transparent;
+}
+.form_input {
+  font-family: "Space Mono", monospace;
+  font-weight: 700;
+  font-style: normal;
+  width: 100%;
+  font-size: 1.5rem;
+  text-align: right;
+  color: hsl(183, 100%, 15%);
+  background-color: hsl(189, 47%, 97%);
+  caret-shape: bar;
+  caret-color: hsl(172, 67%, 45%);
+  -webkit-tap-highlight-color: transparent;
+}
+.form_input::-moz-placeholder {
+  font-family: "Space Mono", monospace;
+  font-weight: 700;
+  font-style: normal;
+  text-align: right;
+  color: hsl(184, 14%, 56%);
+}
+.form_input::placeholder {
+  font-family: "Space Mono", monospace;
+  font-weight: 700;
+  font-style: normal;
+  text-align: right;
+  color: hsl(184, 14%, 56%);
+}
+.form_input:focus {
+  outline: none;
+}
+.form_input:hover {
+  cursor: pointer;
+}
+.form_input--custom {
+  padding-inline: 1rem;
+  border: thin solid transparent;
+}
+.form_input--custom::-moz-placeholder {
+  text-align: center;
+  color: hsl(183, 100%, 15%);
+  opacity: 0.7;
+}
+.form_input--custom::placeholder {
+  text-align: center;
+  color: hsl(183, 100%, 15%);
+  opacity: 0.7;
+}
+.form_tip-button-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+.form_tip-button {
+  font-family: "Space Mono", monospace;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 1.5rem;
+  padding: 0.5rem;
+  border-radius: 0.4rem;
+  color: hsl(0, 100%, 100%);
+  background-color: hsl(183, 100%, 15%);
+}
+.form_tip-button:hover {
+  cursor: pointer;
+  background-color: hsla(172, 67%, 45%, 0.5);
+  color: hsl(183, 100%, 15%);
+}
+.form_tip-button--active {
+  background-color: hsl(172, 67%, 45%);
+  color: hsl(183, 100%, 15%);
+}
+.form_person {
+  font-size: 0.8rem;
+  color: hsl(184, 14%, 56%);
+}
+.form_amount-container {
+  display: flex;
+  justify-content: space-between;
+}
+.form_amount {
+  max-width: 8ch;
+  font-size: 2rem;
+  overflow: auto;
+  color: hsl(172, 67%, 45%);
+}
+.form_amount:hover {
+  cursor: pointer;
+  color: hsl(185, 41%, 84%);
+}
+.form_reset-button {
+  font-family: "Space Mono", monospace;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 1.2rem;
+  padding: 0.5rem;
+  text-transform: uppercase;
+  border-radius: 0.4rem;
+  background-color: hsl(172, 67%, 45%);
+  color: hsl(183, 100%, 15%);
+  opacity: 0.4;
+}
+.form_reset-button--active {
+  opacity: 1;
+}
+.form_reset-button--active:hover {
+  cursor: pointer;
+  background-color: hsl(185, 41%, 84%);
+}
+
+@media screen and (min-width: 62.5rem) {
+  .main-container {
+    row-gap: 3.5rem;
+  }
+  .form {
+    max-width: 58rem;
+    flex-direction: row;
+    -moz-column-gap: 2rem;
+         column-gap: 2rem;
+    padding: 2rem;
+  }
+  .form_section {
+    max-width: 54%;
+    padding: 1rem;
+  }
+  .form_section--Green900 {
+    min-width: 46%;
+    padding: 2.5rem;
+    padding-block-start: 3rem;
+  }
+  .form_tip-button-container {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+  .form_amount-container {
+    align-items: center;
+  }
+  .form_amount {
+    max-width: 6ch;
+    font-size: 3.2rem;
+  }
+  .form_reset-button {
+    margin-block-start: auto;
+  }
+}/*# sourceMappingURL=style.css.map */
