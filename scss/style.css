@@ -195,18 +195,17 @@
     row-gap: 3.5rem;
   }
   .form {
-    max-width: 58rem;
+    max-width: 60rem;
     flex-direction: row;
     -moz-column-gap: 2rem;
          column-gap: 2rem;
     padding: 2rem;
   }
   .form_section {
-    max-width: 55%;
     padding: 1rem;
   }
   .form_section--Green900 {
-    min-width: 45%;
+    min-width: 26rem;
     padding: 2.5rem;
     padding-block-start: 3rem;
   }
