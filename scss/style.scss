@@ -116,6 +116,10 @@ $large : 2rem;
     background-color: $Grey50;
     border-radius: $radius;
     border: 2px solid transparent;
+
+    img {
+      width: fit-content;
+    }
   }
   
   &_input {
@@ -227,6 +231,7 @@ $large : 2rem;
 @media screen and (min-width: 62.5rem) {
   
   .main-container {
+    padding: 0;
     row-gap: 3.5rem;
   }
   
