@@ -111,15 +111,12 @@ $large : 2rem;
   
   &_input-container {
     display: flex;
+    align-items: center;
     padding-block: $smaller;
     padding-inline: $small;
     background-color: $Grey50;
     border-radius: $radius;
     border: 2px solid transparent;
-
-    img {
-      width: fit-content;
-    }
   }
   
   &_input {

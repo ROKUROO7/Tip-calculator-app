@@ -73,15 +73,12 @@
 }
 .form_input-container {
   display: flex;
+  align-items: center;
   padding-block: 0.5rem;
   padding-inline: 1rem;
   background-color: hsl(189, 47%, 97%);
   border-radius: 0.4rem;
   border: 2px solid transparent;
-}
-.form_input-container img {
-  width: -moz-fit-content;
-  width: fit-content;
 }
 .form_input {
   font-family: "Space Mono", monospace;
