@@ -99,6 +99,7 @@
   font-style: normal;
   text-align: right;
   color: hsl(184, 14%, 56%);
+  opacity: 0.5;
 }
 .form_input::placeholder {
   font-family: "Space Mono", monospace;
@@ -106,6 +107,7 @@
   font-style: normal;
   text-align: right;
   color: hsl(184, 14%, 56%);
+  opacity: 0.5;
 }
 .form_input:focus {
   outline: none;

@@ -134,6 +134,7 @@ $large : 2rem;
       @include Space-Mono;
       text-align: right;
       color: $Grey400;
+      opacity: 0.5;
     }
     
     &:focus {
