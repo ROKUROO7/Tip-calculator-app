@@ -79,6 +79,10 @@
   border-radius: 0.4rem;
   border: 2px solid transparent;
 }
+.form_input-container img {
+  width: -moz-fit-content;
+  width: fit-content;
+}
 .form_input {
   font-family: "Space Mono", monospace;
   font-weight: 700;
@@ -190,6 +194,7 @@
 
 @media screen and (min-width: 62.5rem) {
   .main-container {
+    padding: 0;
     row-gap: 3.5rem;
   }
   .form {
