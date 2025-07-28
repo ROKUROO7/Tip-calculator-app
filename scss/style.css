@@ -203,6 +203,7 @@
   }
   .form_section {
     padding: 1rem;
+    row-gap: 2.5rem;
   }
   .form_section--Green900 {
     min-width: 26rem;

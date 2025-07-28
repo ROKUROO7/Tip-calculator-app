@@ -240,6 +240,7 @@ $large : 2rem;
     
     &_section {
       padding: $small;
+      row-gap: 2.5rem;
       
       &--Green900 {
         min-width: 26rem;
