@@ -65,7 +65,9 @@ function displayZero() {
 
 function reset() {
   bill_Error.innerText = ""
+  bill_input.value = ""
   person_Error.innerText = ""
+  person_input.value = ""
   custom_Error.innerText = ""
   borderReset()
   
