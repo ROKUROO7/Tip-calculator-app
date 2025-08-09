@@ -147,6 +147,7 @@ $large : 2rem;
     
     &--custom {
       padding-inline: $small;
+      border-radius: $radius;
       border: thin solid transparent;
       
       &::placeholder {

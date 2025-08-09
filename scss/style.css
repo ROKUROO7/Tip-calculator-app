@@ -117,6 +117,7 @@
 }
 .form_input--custom {
   padding-inline: 1rem;
+  border-radius: 0.4rem;
   border: thin solid transparent;
 }
 .form_input--custom::-moz-placeholder {
