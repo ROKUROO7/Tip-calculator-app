@@ -69,7 +69,7 @@ function reset() {
   person_Error.innerText = ""
   person_input.value = ""
   custom_Error.innerText = ""
-  custom_Error.value = ""
+  custom_input.value = ""
   borderReset()
   
   tipClassRemove()
